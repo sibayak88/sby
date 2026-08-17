@@ -5,6 +5,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="google-site-verification" content="M1AjrHj2aE02DNhno7i6YbxlKs3nuHgX1Y-mAACjBBw" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
