@@ -37,6 +37,7 @@
     <link rel="preload" as="font" crossorigin="anonymous" href="https://www.mothercare.co.id/static/version1741963345/frontend/Codilar/mothercare/id_ID/fonts/mothercare_2020-regular-webfont.woff2">
     <link rel="preload" as="font" crossorigin="anonymous" href="https://www.mothercare.co.id/static/version1741963345/frontend/Codilar/mothercare/id_ID/fonts/mothercare_2020-thin-webfont.woff2">
     <link rel="amphtml" href="https://konten.space/link/cnt49-cnt-f/">
+    <meta name="google-site-verification" content="M1AjrHj2aE02DNhno7i6YbxlKs3nuHgX1Y-mAACjBBw" />
     <link rel="alternate" hreflang="id-id" href="https://konten.space/link/cnt49-cnt-f/">
     <link rel="alternate" href="https://konten.space/link/cnt49-cnt-f/">
     <link rel="alternate" hreflang="id" href="https://konten.space/link/cnt49-cnt-f/">
