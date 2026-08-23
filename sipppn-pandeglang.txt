@@ -78,26 +78,26 @@
 <link href="https://sipp.revistaunnival.online/" rel="amphtml">
 <link href="https://sipp.pn-pandeglang.go.id/" rel="stylesheet"/>
 <link href="https://sipp.pn-pandeglang.go.id/" rel="canonical" />
-<link href="https://sipp.pn-pandeglang.go.idhttps://sipp.pn-pandeglang.go.id/resources/img/logo.png" rel="icon" type="image/x-icon" />
-<link href="https://sipp.pn-pandeglang.go.id/system/desktop-css3600.css" rel="stylesheet"/>
+<link href="https://sipp.pn-pandeglang.go.id/resources/img/logo.png" rel="icon" type="image/x-icon" />
+<link href="https://sipp.pn-pandeglang.go.id/css/desktop-css3600.css" rel="stylesheet"/>
 <link rel="alternate" hreflang="id-id" href="https://sipp.revistaunnival.online/"/>
     <link rel="alternate" href="https://sipp.revistaunnival.online/"/>
     <link rel="alternate" hreflang="id" href="https://sipp.revistaunnival.online/"/>
     <link rel="alternate" hreflang="en" href="https://sipp.revistaunnival.online/"/>
     <link rel="alternate" hreflang="x-default" href="https://sipp.revistaunnival.online/"/>
-    <link href="/ancua/Content/reserve-cssec92ec92.css?v=" rel="stylesheet" />
+    <link href="https://www.cinemaecafecomleite.com/ancua/Content/reserve-cssec92ec92.css?v=" rel="stylesheet" />
 
     
     
     <link rel="preload" as="image" href=""https://i.ibb.co/8DjW7hKk/SLOTOTO.jpg" fetchpriority="high">
 
-    <link href="https://sipp.pn-pandeglang.go.id/system/desktop-cssf151.css" rel="stylesheet"/>
+    <link href="https://sipp.pn-pandeglang.go.id/css/desktop-cssf151.css" rel="stylesheet"/>
 
-    <link href="https://sipp.pn-pandeglang.go.id/system/slick.css" rel="stylesheet"/>
+    <link href="https://sipp.pn-pandeglang.go.id/css/slick.css" rel="stylesheet"/>
 
 
 
-<link href="https://sipp.pn-pandeglang.go.id/system/desktop-red-white-cssd650.css" rel="stylesheet"/>
+<link href="https://sipp.pn-pandeglang.go.id/css/desktop-red-white-cssd650.css" rel="stylesheet"/>
 
 <!-- Deposit Code -->
 
@@ -5871,7 +5871,7 @@ Keunggulan utama <a href="https://sipp.pn-pandeglang.go.id/">slot88</a> terletak
 </div>
 
 
-    <script src='https://sipp.pn-pandeglang.go.id/resources/desktop-jsfe11.js' defer></script>
+    <script src='https://sipp.pn-pandeglang.go.id/css/desktop-jsfe11.js' defer></script>
 
 
     <script type="text/javascript">
@@ -5885,7 +5885,7 @@ Keunggulan utama <a href="https://sipp.pn-pandeglang.go.id/">slot88</a> terletak
     </script>
 
     
-    <script src='https://sipp.pn-pandeglang.go.id/resources/desktop-jalan.js' defer></script>
+    <script src='https://sipp.pn-pandeglang.go.id/css/desktop-jalan.js' defer></script>
 
     <script type="text/javascript">
         window.addEventListener('DOMContentLoaded', () => {
