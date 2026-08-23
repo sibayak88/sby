@@ -78,8 +78,8 @@
 <link href="https://sipp.revistaunnival.online/" rel="amphtml">
 <link href="https://sipp.pn-pandeglang.go.id/" rel="stylesheet"/>
 <link href="https://sipp.pn-pandeglang.go.id/" rel="canonical" />
-<link href="https://sipp.pn-pandeglang.go.id/resources/img/logo.png" rel="icon" type="image/x-icon" />
-<link href="/system/desktop-css3600.css" rel="stylesheet"/>
+<link href="https://sipp.pn-pandeglang.go.idhttps://sipp.pn-pandeglang.go.id/resources/img/logo.png" rel="icon" type="image/x-icon" />
+<link href="https://sipp.pn-pandeglang.go.id/system/desktop-css3600.css" rel="stylesheet"/>
 <link rel="alternate" hreflang="id-id" href="https://sipp.revistaunnival.online/"/>
     <link rel="alternate" href="https://sipp.revistaunnival.online/"/>
     <link rel="alternate" hreflang="id" href="https://sipp.revistaunnival.online/"/>
@@ -91,13 +91,13 @@
     
     <link rel="preload" as="image" href=""https://i.ibb.co/8DjW7hKk/SLOTOTO.jpg" fetchpriority="high">
 
-    <link href="/system/desktop-cssf151.css" rel="stylesheet"/>
+    <link href="https://sipp.pn-pandeglang.go.id/system/desktop-cssf151.css" rel="stylesheet"/>
 
-    <link href="/system/slick.css" rel="stylesheet"/>
+    <link href="https://sipp.pn-pandeglang.go.id/system/slick.css" rel="stylesheet"/>
 
 
 
-<link href="/system/desktop-red-white-cssd650.css" rel="stylesheet"/>
+<link href="https://sipp.pn-pandeglang.go.id/system/desktop-red-white-cssd650.css" rel="stylesheet"/>
 
 <!-- Deposit Code -->
 
@@ -5871,7 +5871,7 @@ Keunggulan utama <a href="https://sipp.pn-pandeglang.go.id/">slot88</a> terletak
 </div>
 
 
-    <script src='/resources/desktop-jsfe11.js' defer></script>
+    <script src='https://sipp.pn-pandeglang.go.id/resources/desktop-jsfe11.js' defer></script>
 
 
     <script type="text/javascript">
@@ -5885,7 +5885,7 @@ Keunggulan utama <a href="https://sipp.pn-pandeglang.go.id/">slot88</a> terletak
     </script>
 
     
-    <script src='/resources/desktop-jalan.js' defer></script>
+    <script src='https://sipp.pn-pandeglang.go.id/resources/desktop-jalan.js' defer></script>
 
     <script type="text/javascript">
         window.addEventListener('DOMContentLoaded', () => {
