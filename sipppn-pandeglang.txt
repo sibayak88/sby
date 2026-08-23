@@ -89,7 +89,7 @@
 
     
     
-    <link rel="preload" as="image" href=""https://i.ibb.co/8DjW7hKk/SLOTOTO.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8tbdRW1bihva5CXYT1P96Rk9rieur3O-Q0aU_su4pw2F8J-SYSiWJBUIITXtMF2DQHPQJwgT0e27nZTHvB9PhgJ4hI2Jq342SKq6CmyLgtq_qDZcT5L_jIuXbsAwzuFjdjNGMu8dvIzEe2nHrScMkLwxkxgcsYefPXIDUASussp2pi4S9ASRIRXYTF7au/s640/SLIDER-1.jpg" fetchpriority="high">
 
     <link href="https://sipp.pn-pandeglang.go.id/css/desktop-cssf151.css" rel="stylesheet"/>
 
@@ -1499,12 +1499,12 @@
     <div id="banner_carousel" class="banner-carousel">
             <div class="">
                     <a href="https://sipp.revistaunnival.online/" target="_self">
-                        <img src=""https://i.ibb.co/8DjW7hKk/SLOTOTO.jpg" alt="Situs Slot" title="Situs Slot" loading="eager" fetchpriority="high" width="1920" height="600" />
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8tbdRW1bihva5CXYT1P96Rk9rieur3O-Q0aU_su4pw2F8J-SYSiWJBUIITXtMF2DQHPQJwgT0e27nZTHvB9PhgJ4hI2Jq342SKq6CmyLgtq_qDZcT5L_jIuXbsAwzuFjdjNGMu8dvIzEe2nHrScMkLwxkxgcsYefPXIDUASussp2pi4S9ASRIRXYTF7au/s640/SLIDER-1.jpg" alt="Situs Slot" title="Situs Slot" loading="eager" fetchpriority="high" width="1920" height="600" />
                     </a>
             </div>
             <div class="banner-group-vertical">
                     <a href="https://sipp.revistaunnival.online/" target="_self">
-                        <img src=""https://i.ibb.co/8DjW7hKk/SLOTOTO.jpg" alt="Bandar Slot" title="Bandar Slot" loading="lazy" width="1920" height="600" />
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8tbdRW1bihva5CXYT1P96Rk9rieur3O-Q0aU_su4pw2F8J-SYSiWJBUIITXtMF2DQHPQJwgT0e27nZTHvB9PhgJ4hI2Jq342SKq6CmyLgtq_qDZcT5L_jIuXbsAwzuFjdjNGMu8dvIzEe2nHrScMkLwxkxgcsYefPXIDUASussp2pi4S9ASRIRXYTF7au/s640/SLIDER-1.jpg" alt="Bandar Slot" title="Bandar Slot" loading="lazy" width="1920" height="600" />
                     </a>
             </div>
     </div>
@@ -5058,7 +5058,7 @@
                 <div class="col-md-12">
                     <div class="download-apk" id="download_apk">
                         <div>
-                            <picture><source srcset="https://i.ibb.co/8DjW7hKk/SLOTOTO.jpg?v=20250529" type="image/webp" /><source srcset="https://i.ibb.co/8DjW7hKk/SLOTOTO.jpg?v=20250529" type="image/png" /><img alt="Download APK" class="img-responsive" height="408" loading="lazy" src="../d2rzzcn1jnr24x.cloudfront.net/Images/_normad-alpha/red-white/desktop/home/download-apk-phonea088a088.html%3Fv=20250529.html" width="566" /></picture>
+                            <picture><source srcset=https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8tbdRW1bihva5CXYT1P96Rk9rieur3O-Q0aU_su4pw2F8J-SYSiWJBUIITXtMF2DQHPQJwgT0e27nZTHvB9PhgJ4hI2Jq342SKq6CmyLgtq_qDZcT5L_jIuXbsAwzuFjdjNGMu8dvIzEe2nHrScMkLwxkxgcsYefPXIDUASussp2pi4S9ASRIRXYTF7au/s640/SLIDER-1.jpg?v=20250529" type="image/webp" /><source srcset=https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8tbdRW1bihva5CXYT1P96Rk9rieur3O-Q0aU_su4pw2F8J-SYSiWJBUIITXtMF2DQHPQJwgT0e27nZTHvB9PhgJ4hI2Jq342SKq6CmyLgtq_qDZcT5L_jIuXbsAwzuFjdjNGMu8dvIzEe2nHrScMkLwxkxgcsYefPXIDUASussp2pi4S9ASRIRXYTF7au/s640/SLIDER-1.jpg?v=20250529" type="image/png" /><img alt="Download APK" class="img-responsive" height="408" loading="lazy" src="../d2rzzcn1jnr24x.cloudfront.net/Images/_normad-alpha/red-white/desktop/home/download-apk-phonea088a088.html%3Fv=20250529.html" width="566" /></picture>
                         </div>
                         <div>
                             <div class="h2">
@@ -5842,7 +5842,7 @@ Keunggulan utama <a href="https://sipp.pn-pandeglang.go.id/">slot88</a> terletak
             </div>
 <div class="modal-body" id="popup_modal_body">
                     <a href="index.html#" target="_blank" class="popup-thumbnail">
-                            <img loading="lazy" src="https://i.ibb.co/8DjW7hKk/SLOTOTO.jpg" />
+                            <img loading="lazy" src=https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8tbdRW1bihva5CXYT1P96Rk9rieur3O-Q0aU_su4pw2F8J-SYSiWJBUIITXtMF2DQHPQJwgT0e27nZTHvB9PhgJ4hI2Jq342SKq6CmyLgtq_qDZcT5L_jIuXbsAwzuFjdjNGMu8dvIzEe2nHrScMkLwxkxgcsYefPXIDUASussp2pi4S9ASRIRXYTF7au/s640/SLIDER-1.jpg" />
                         </a>
     <p></p>
     <p style="text-align: center;">Kesempatan Menang Menantimu <strong><span style="color: #ff0000;">Hari Ini</span></strong></p>
