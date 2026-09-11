@@ -5,6 +5,7 @@
 <head>
    <link href="https://journal.iftkledalero.ac.id/" rel="preconnect" />
    <meta charset="utf-8" />
+<meta name="google-site-verification" content="AIQwnvUuMVQsA7nspjQ03AawQaxbfJBv2IPc0JND5GM" />
    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
    <meta content="width=device-width, initial-scale=1" name="viewport" />
