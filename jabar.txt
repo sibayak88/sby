@@ -22,14 +22,14 @@
     <meta name="theme-color" content="#22321">
     <title>Toto 4D : Link Situs Slot Toto Depo Dana 5k Gacor Resmi Jaminan Menang Hari ini Viral</title>
     <link rel="canonical" href="https://ilms.jabarprov.go.id/opac/">
-    <link rel="amphtml" href="https://opac.unwira-famasi.com/">
-      <link rel="alternate" href="https://opac.unwira-famasi.com/">
-  <link rel="alternate" href="https://opac.unwira-famasi.com/" hreflang="id">
-  <link rel="alternate" href="https://opac.unwira-famasi.com/" hreflang="en">
-  <link rel="alternate" href="https://opac.unwira-famasi.com/" hreflang="x-default">
-  <link rel="alternate" hreflang="id-ID" href="https://opac.unwira-famasi.com/" />
-  <link rel="alternate" hreflang="en-US" href="https://opac.unwira-famasi.com/" />
-  <link rel="alternate" hreflang="en-SG" href="https://opac.unwira-famasi.com/" />
+    <link rel="amphtml" href="https://opac-1.unwira-famasi.com/">
+      <link rel="alternate" href="https://opac-1.unwira-famasi.com/">
+  <link rel="alternate" href="https://opac-1.unwira-famasi.com/" hreflang="id">
+  <link rel="alternate" href="https://opac-1.unwira-famasi.com/" hreflang="en">
+  <link rel="alternate" href="https://opac-1.unwira-famasi.com/" hreflang="x-default">
+  <link rel="alternate" hreflang="id-ID" href="https://opac-1.unwira-famasi.com/" />
+  <link rel="alternate" hreflang="en-US" href="https://opac-1.unwira-famasi.com/" />
+  <link rel="alternate" hreflang="en-SG" href="https://opac-1.unwira-famasi.com/" />
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -13597,11 +13597,11 @@ dataLayer.push({event:'analytics_ready',event_attributes:{event_type:'user',cust
                         <i class="e-icon -icon-cart"></i>
                     </div>
                 </a>
-                <a class="off-canvas-right__link" href="https://opac.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" bis_skin_checked="1">
+                <a class="off-canvas-right__link" href="https://opac-1.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" bis_skin_checked="1">
                     Create an Envato Account
                     <i class="e-icon -icon-envato"></i>
                 </a>
-                <a class="off-canvas-right__link" href="https://opac.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" bis_skin_checked="1">
+                <a class="off-canvas-right__link" href="https://opac-1.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" bis_skin_checked="1">
                     Sign In
                     <i class="e-icon -icon-login"></i>
                 </a>
@@ -13668,14 +13668,14 @@ dataLayer.push({event:'analytics_ready',event_attributes:{event_type:'user',cust
                                     <nav class="global-header-menu" role="navigation">
                                         <ul class="global-header-menu__list">
                                             <li class="global-header-menu__list-item">
-                                                <a class="global-header-menu__link" href="https://opac.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" bis_skin_checked="1">
+                                                <a class="global-header-menu__link" href="https://opac-1.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" bis_skin_checked="1">
                                                     <span class="global-header-menu__link-text">
                                                         LOGIN RESMI
                                                     </span>
                                                 </a>
                                             </li>
                                             <li class="global-header-menu__list-item">
-                                                <a class="global-header-menu__link" href="https://opac.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" bis_skin_checked="1">
+                                                <a class="global-header-menu__link" href="https://opac-1.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" bis_skin_checked="1">
                                                     <span class="global-header-menu__link-text">
                                                        DAFTAR AKUN VIP
                                                     </span>
@@ -13887,7 +13887,7 @@ dataLayer.push({event:'analytics_ready',event_attributes:{event_type:'user',cust
                                             <span class="item-header__cart-button-icon">
                                                 <i class="e-icon -icon-cart -margin-right"></i>
                                             </span>
-</a><a href="https://opac.unwira-famasi.com//?client_id=604501519.1770609294&amp;session_id=1770609294" style="text-decoration:none; color:inherit;" bis_skin_checked="1">
+</a><a href="https://opac-1.unwira-famasi.com//?client_id=604501519.1770609294&amp;session_id=1770609294" style="text-decoration:none; color:inherit;" bis_skin_checked="1">
   <span class="t-heading -size-m -color-light -margin-none">
     <b class="t-currency">
       <span class="js-item-header__price">£DAFTAR !</span>
@@ -14046,7 +14046,7 @@ window.GtmMeasurements.sendAnalyticsEvent({"eventName":"view_item","eventType":"
 
 
 
-                                            <a target="_blank" href="https://opac.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" class="efek-goyang-kilau" bis_skin_checked="1">
+                                            <a target="_blank" href="https://opac-1.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" class="efek-goyang-kilau" bis_skin_checked="1">
   <img alt="Toto 4D : Link Situs Slot Toto Depo Dana 5k Gacor Resmi Jaminan Menang Hari ini Viral" width="500" height="500" srcset="https://i.ibb.co/b5b5Wj38/slot88demo.jpg" sizes="(min-width: 1024px) 590px, (min-width: 1px) 100vw, 600px" src="https://i.ibb.co/b5b5Wj38/slot88demo.jpg">
 </a>
 
@@ -14099,8 +14099,8 @@ window.GtmMeasurements.sendAnalyticsEvent({"eventName":"view_item","eventType":"
 
                                             <div class="item-preview__actions" bis_skin_checked="1">
                                                 <div class="n-columns-2" bis_skin_checked="1">
-                                                    <a href="https://opac.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" rel="nofollow noreferrer" class="login" bis_skin_checked="1">LOGIN</a>
-                                                    <a href="https://opac.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" rel="nofollow noreferrer" class="register" bis_skin_checked="1">DAFTAR</a>
+                                                    <a href="https://opac-1.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" rel="nofollow noreferrer" class="login" bis_skin_checked="1">LOGIN</a>
+                                                    <a href="https://opac-1.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" rel="nofollow noreferrer" class="register" bis_skin_checked="1">DAFTAR</a>
                                                 </div>
                                             </div>
                                             <br>
@@ -14851,23 +14851,23 @@ window.datadog_attributes['pageType']='item:details'})()
         </div>
     </div>
     <div class="daftarku-fixed-footer" bis_skin_checked="1">
-    <a href="https://opac.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" rel="nofollow noopener" target="_blank" bis_skin_checked="1">
+    <a href="https://opac-1.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" rel="nofollow noopener" target="_blank" bis_skin_checked="1">
         <img layout="intrinsic" height="20px" width="20px" src="https://imgstore.io/images/2025/06/02/promo.webp" alt="Promo">
         Promo
     </a>
-    <a href="https://opac.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" rel="nofollow noopener" target="_blank" bis_skin_checked="1">
+    <a href="https://opac-1.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" rel="nofollow noopener" target="_blank" bis_skin_checked="1">
         <img layout="intrinsic" height="20px" width="20px" src="https://imgstore.io/images/2025/06/02/login-new.webp" alt="Login">
         Login
     </a>
-    <a href="https://opac.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" rel="nofollow noopener" target="_blank" class="tada" bis_skin_checked="1">
+    <a href="https://opac-1.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" rel="nofollow noopener" target="_blank" class="tada" bis_skin_checked="1">
         <img layout="intrinsic" height="20px" width="20px" src="https://imgstore.io/images/2025/06/02/daftar-new.webp" alt="Daftar">
         Daftar
     </a>
-    <a href="https://opac.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" rel="nofollow noopener" target="_blank" bis_skin_checked="1">
+    <a href="https://opac-1.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" rel="nofollow noopener" target="_blank" bis_skin_checked="1">
         <img layout="intrinsic" height="20px" width="20px" src="https://imgstore.io/images/2025/06/02/link-new.webp" alt="Link">
         Prediksi
     </a>
-    <a href="https://opac.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" rel="nofollow noopener" target="_blank" class="js_live_chat_link live-chat-link" bis_skin_checked="1">
+    <a href="https://opac-1.unwira-famasi.com/?client_id=604501519.1770609294&amp;session_id=1770609294" rel="nofollow noopener" target="_blank" class="js_live_chat_link live-chat-link" bis_skin_checked="1">
         <img class="live-chat-icon" layout="intrinsic" height="20px" width="20px" src="https://imgstore.io/images/2025/06/02/livechat-new.webp" alt="Live Chat">
         Live Chat
     </a>
