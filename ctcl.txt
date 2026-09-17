@@ -33,7 +33,7 @@
 <link rel="preload" as="font" crossorigin="anonymous" href="https://www.mothercare.co.id/static/version1741963345/frontend/Codilar/mothercare/id_ID/fonts/mothercare_2020-demi-webfont.woff2">
 <link rel="preload" as="font" crossorigin="anonymous" href="https://www.mothercare.co.id/static/version1741963345/frontend/Codilar/mothercare/id_ID/fonts/mothercare_2020-regular-webfont.woff2">
 <link rel="preload" as="font" crossorigin="anonymous" href="https://www.mothercare.co.id/static/version1741963345/frontend/Codilar/mothercare/id_ID/fonts/mothercare_2020-thin-webfont.woff2">
-
+<meta name="google-site-verification" content="BGm2iiUIEMEhv0HINw9h84hjPjubcXN3vV8E5TnKYVM" />
 <link rel="amphtml" href="https://resmigacor.kiddou.store">
 <link rel="icon" type="image/x-icon" href="https://gcdnb.pbrd.co/images/PJ-GjxXEJhBj.webp">
 <link rel="shortcut icon" type="image/x-icon" href="https://gcdnb.pbrd.co/images/PJ-GjxXEJhBj.webp">
